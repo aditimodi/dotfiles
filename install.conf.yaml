@@ -4,11 +4,14 @@
 
 - clean: ['~']
 
-- link:
-    ~/.vimrc: vimrc
-
 - create:
    - ~/.vim
+   - ~/.vim/autoload/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.vim/autoload/plug.vim: vim-plug/plug.vim 
+
