@@ -23,4 +23,9 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
+call plug#begin('~/.vim/plugged')
 
+ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ Plug 'junegunn/fzf.vim'
+
+call plug#end()
