@@ -1,4 +1,3 @@
-
 syntax enable           " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
@@ -34,7 +33,12 @@ call plug#begin('~/.vim/plugged')
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'altercation/vim-colors-solarized'
 call plug#end()
+syntax enable
+set background=dark
+colorscheme solarized
+
 
 "  backup
 set backup
@@ -49,7 +53,9 @@ function! ToggleNumber()
         set relativenumber
     endif
 endfunc
-
 map <F1> :call ToggleNumber()<CR>
 map ; :Files<CR>
+
+" switch between solarised dark and light themes
+call togglebg#map("<F5>")
 
