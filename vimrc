@@ -1,16 +1,31 @@
 syntax enable           " enable syntax processing
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
+set nocompatible    " behave like vim, not old vi
+set ruler           "show the cursor position
+set title           "show title on the window
+set display+=lastline  " show as much as possible of last lin
+set autowrite       " save file on some commands
+        
+" How Tab behaves
+set tabstop=4        " number of visual spaces per TAB
+set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
-set laststatus=2
+set smarttab        " smart tabulation and backspace
+set bs=indent,eol,start " allow backspacing over everything
+                
+set laststatus=2    " always show the status line
 set noshowmode      "removing status in last line
 set number              " show line numbers
 set relativenumber      "show relative line numbering
 set showcmd             " show command in bottom bar
-"set cursorline          " highlight current line
+set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
-set wildmenu            " visual autocomplete for command menu
+set wildmenu            " visual autocomplete for command menu 
+set wildmode=longest:full   " with wildmode
 set showmatch           " highlight matching [{()}]
+
+" How IO behaves
+set ttyfast              " assume the terminal is fast 
+set mouse=a             " assume the terminal is fast
 
 " Searching
 set incsearch           " search as characters are entered
