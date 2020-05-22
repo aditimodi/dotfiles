@@ -48,11 +48,26 @@ call plug#begin('~/.vim/plugged')
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ 
+ " colorscheme plugins
  Plug 'altercation/vim-colors-solarized'
-call plug#end()
+ Plug 'tomasr/molokai'
+ Plug 'chriskempson/base16-vim'
+ Plug 'lifepillar/vim-gruvbox8'
+ Plug 'nielsmadan/harlequin'
+ Plug 'w0ng/vim-hybrid'
+ Plug 'kristijanhusak/vim-hybrid-material'
+ Plug 'nanotech/jellybeans.vim'
+ Plug 'Wutzara/vim-materialtheme'
+ Plug 'rakr/vim-one'
+ Plug 'joshdick/onedark.vim'
+ Plug 'NLKNguyen/papercolor-theme'
+ Plug 'jpo/vim-railscasts-theme'
+ Plug 'chriskempson/vim-tomorrow-theme'
+ call plug#end()
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme one
 
 
 "  backup
