@@ -74,9 +74,9 @@ colorscheme one
 
 " to enable comment plugin
 filetype plugin on
+:hi Comment ctermbg=lightblue    " highlight comments 
 
-
-"  backup
+"backup
 set backup
 set backupdir=~/.vim_backup
 
