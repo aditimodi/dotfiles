@@ -1,18 +1,33 @@
-
 syntax enable           " enable syntax processing
-set backspace=indent,eol,start
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
+set nocompatible    " behave like vim, not old vi
+set ruler           "show the cursor position
+set title           "show title on the window
+set display+=lastline  " show as much as possible of last lin
+set autowrite       " save file on some commands
+        
+" How Tab behaves
+set tabstop=4        " number of visual spaces per TAB
+set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
-set laststatus=2
+set smarttab        " smart tabulation and backspace
+set bs=indent,eol,start " allow backspacing over everything
+                
+set laststatus=2    " always show the status line
 set noshowmode      "removing status in last line
 set number              " show line numbers
 set relativenumber      "show relative line numbering
 set showcmd             " show command in bottom bar
-"set cursorline          " highlight current line
+set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
-set wildmenu            " visual autocomplete for command menu
+set wildmenu            " visual autocomplete for command menu 
+set wildmode=longest:full   " with wildmode
 set showmatch           " highlight matching [{()}]
+
+" How IO behaves
+set ttyfast              " assume the terminal is fast 
+set mouse=a             " assume the terminal is fast
 
 " Searching
 set incsearch           " search as characters are entered
@@ -35,7 +50,27 @@ call plug#begin('~/.vim/plugged')
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+ 
+ " colorscheme plugins
+ Plug 'altercation/vim-colors-solarized'
+ Plug 'tomasr/molokai'
+ Plug 'chriskempson/base16-vim'
+ Plug 'lifepillar/vim-gruvbox8'
+ Plug 'nielsmadan/harlequin'
+ Plug 'w0ng/vim-hybrid'
+ Plug 'kristijanhusak/vim-hybrid-material'
+ Plug 'nanotech/jellybeans.vim'
+ Plug 'Wutzara/vim-materialtheme'
+ Plug 'rakr/vim-one'
+ Plug 'joshdick/onedark.vim'
+ Plug 'NLKNguyen/papercolor-theme'
+ Plug 'jpo/vim-railscasts-theme'
+ Plug 'chriskempson/vim-tomorrow-theme'
+ call plug#end()
+syntax enable
+set background=dark
+colorscheme one
+
 
 "  backup
 set backup
@@ -50,7 +85,13 @@ function! ToggleNumber()
         set relativenumber
     endif
 endfunc
-
 map <F1> :call ToggleNumber()<CR>
 map ; :Files<CR>
+
+"mapping key for date insertion (helpful while creating logbooks)
+:map <F3> :r! date +"\%Y-\%m-\%d"<cr>
+
+
+" switch between solarised dark and light themes
+call togglebg#map("<F5>")
 
