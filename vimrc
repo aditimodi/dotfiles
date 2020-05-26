@@ -50,7 +50,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
- 
+ Plug 'preservim/nerdcommenter'
+
  " colorscheme plugins
  Plug 'altercation/vim-colors-solarized'
  Plug 'tomasr/molokai'
@@ -70,6 +71,9 @@ call plug#begin('~/.vim/plugged')
 syntax enable
 set background=dark
 colorscheme one
+
+" to enable comment plugin
+filetype plugin on
 
 
 "  backup
