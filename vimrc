@@ -50,24 +50,24 @@ call plug#begin('~/.vim/plugged')
  Plug 'tpope/vim-surround'
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ "Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'preservim/nerdcommenter'
 
  " colorscheme plugins
  Plug 'altercation/vim-colors-solarized'
- Plug 'tomasr/molokai'
- Plug 'chriskempson/base16-vim'
- Plug 'lifepillar/vim-gruvbox8'
- Plug 'nielsmadan/harlequin'
- Plug 'w0ng/vim-hybrid'
- Plug 'kristijanhusak/vim-hybrid-material'
- Plug 'nanotech/jellybeans.vim'
- Plug 'Wutzara/vim-materialtheme'
+ "Plug 'tomasr/molokai'
+ "Plug 'chriskempson/base16-vim'
+ "Plug 'lifepillar/vim-gruvbox8'
+ "Plug 'nielsmadan/harlequin'
+ "Plug 'w0ng/vim-hybrid'
+ "Plug 'kristijanhusak/vim-hybrid-material'
+ "Plug 'nanotech/jellybeans.vim'
+ "Plug 'Wutzara/vim-materialtheme'
  Plug 'rakr/vim-one'
- Plug 'joshdick/onedark.vim'
- Plug 'NLKNguyen/papercolor-theme'
- Plug 'jpo/vim-railscasts-theme'
- Plug 'chriskempson/vim-tomorrow-theme'
+ "Plug 'joshdick/onedark.vim'
+ "Plug 'NLKNguyen/papercolor-theme'
+ "Plug 'jpo/vim-railscasts-theme'
+ "Plug 'chriskempson/vim-tomorrow-theme'
  call plug#end()
 syntax enable
 set background=dark
@@ -96,6 +96,13 @@ map ; :Files<CR>
 "mapping key for date insertion (helpful while creating logbooks)
 ":map <F3> :r! date +"\%Y-\%m-\%d"<cr>
 :map <F3> :put =strftime(\"%c\")<cr>
+
+
+"syntax highlighting for important marked events
+nnoremap <leader>n o [  ]
+:syn match Important /\[.*\!.*$/ 
+:hi Important ctermbg=red
+:NoMatchParen
 
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")
