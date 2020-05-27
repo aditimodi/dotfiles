@@ -89,3 +89,4 @@ map ; :Files<CR>
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")
 
+
