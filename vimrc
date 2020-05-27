@@ -1,4 +1,7 @@
+
 syntax enable           " enable syntax processing
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
 set nocompatible    " behave like vim, not old vi
 set ruler           "show the cursor position
 set title           "show title on the window
@@ -48,7 +51,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
- 
+ Plug 'preservim/nerdcommenter'
+
  " colorscheme plugins
  Plug 'altercation/vim-colors-solarized'
  Plug 'tomasr/molokai'
@@ -69,8 +73,11 @@ syntax enable
 set background=dark
 colorscheme one
 
+" to enable comment plugin
+filetype plugin on
+:hi Comment ctermbg=lightblue    " highlight comments 
 
-"  backup
+"backup
 set backup
 set backupdir=~/.vim_backup
 
@@ -85,6 +92,10 @@ function! ToggleNumber()
 endfunc
 map <F1> :call ToggleNumber()<CR>
 map ; :Files<CR>
+
+"mapping key for date insertion (helpful while creating logbooks)
+":map <F3> :r! date +"\%Y-\%m-\%d"<cr>
+:map <F3> :put =strftime(\"%c\")<cr>
 
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")
