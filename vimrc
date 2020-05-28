@@ -7,7 +7,7 @@ set ruler           "show the cursor position
 set title           "show title on the window
 set display+=lastline  " show as much as possible of last lin
 set autowrite       " save file on some commands
-        
+
 " How Tab behaves
 set tabstop=4        " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
@@ -47,7 +47,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
  Plug 'itchyny/lightline.vim'
- Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -71,12 +71,11 @@ call plug#begin('~/.vim/plugged')
  call plug#end()
 syntax enable
 set background=dark
-colorscheme one
+colorscheme one                 " which colorscheme you currently want
 
 " to enable comment plugin
 filetype plugin on
-:hi Comment ctermbg=lightblue    " highlight comments 
-
+:hi Comment ctermbg=DarkGray ctermfg=White    " highlight comments 
 "backup
 set backup
 set backupdir=~/.vim_backup
@@ -99,10 +98,11 @@ map ; :Files<CR>
 
 
 "syntax highlighting for important marked events
-nnoremap <leader>n o [  ]
-:syn match Important /\[.*\!.*$/ 
-:hi Important ctermbg=red
-:NoMatchParen
+autocmd BufRead,BufnewFile *.md nnoremap <leader>n o [  ]
+autocmd BufRead,BufnewFile *.md :syn match Important /\[.*\!.*$/ 
+autocmd BufRead,BufnewFile *.md :hi Important ctermfg=White ctermbg=DarkRed
+autocmd BufRead,BufnewFile *.md :syn match Completed /\[.*\!!!!.*$/ 
+autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")
