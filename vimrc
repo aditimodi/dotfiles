@@ -1,4 +1,3 @@
-
 syntax enable           " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
@@ -103,6 +102,10 @@ autocmd BufRead,BufnewFile *.md :syn match Important /\[.*\!.*$/
 autocmd BufRead,BufnewFile *.md :hi Important ctermfg=White ctermbg=DarkRed
 autocmd BufRead,BufnewFile *.md :syn match Completed /\[.*\!!!!.*$/ 
 autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
+
+"adding templates
+autocmd BufnewFile *.md so ~/.vim/header_template.txt
+
 
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")

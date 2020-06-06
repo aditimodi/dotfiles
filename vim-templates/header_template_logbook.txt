@@ -1,0 +1,30 @@
+:insert
+###################################################################
+#File Name: Research/Personal Logbook
+#Usage: Keeping records of my professional and personal work
+#Description:  
+#Args:
+<!--created on 2020-05-27: Purpose is to document the day to day progress of research along with all the necessary details -->
+Intention is to keep records of all the works (research, programming, learning, conferences, imp events ) in the monthly logbook
+<!--back up on github. Synchronise the same repo on pratyush, aditya, Macbook and office PC and maintain the logbook-->
+<!--Todo:Avoid sentences which does not make sense-->
+<!--Create Function 'lb' in bashrc or zshrc as a shortcut to open and write in your monthly logbook-->
+<!--function to call research logbook by year and month-->
+<!--function rlb() {-->
+        <!--vim ~/.research_logbook/logbook_$(date '+%Y-%m').md-->
+<!--}-->
+<!--function plb() {-->
+        <!--vim ~/.personal_logbook/logbook_$(date '+%Y').md-->
+<!--}-->
+<!--F3 keystroke is mapped for entering date-->
+<leader>n for inserting a new line with a box []
+To mark Todo Items in red use "!". ex: 
+ [  ] this is an imp event marked in red !
+To mark completed Items in green use "!!!!". ex: 
+ [  ] done !!!!
+#Author: Aditi Modi 
+#Email: aditimodi91@gmail.com
+# Github: git@github.com:aditimodi
+#Creation Date:  
+###################################################################
+

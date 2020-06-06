@@ -15,4 +15,4 @@
     ~/.vimrc: vimrc
     ~/.vim/autoload/plug.vim: vim-plug/plug.vim 
     ~/.zshrc: zshrc
-
+    ~/.vim/header_template.txt: vim-templates/header_template_logbook.txt
