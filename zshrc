@@ -27,10 +27,20 @@ ZSH_THEME="agnoster"
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
-function lb() {
+## function to call research logbook by year and month
+function rlb() {
         vim ~/.research_logbook/logbook_$(date '+%Y-%m').md
 }
+
+## function to call personal logbook by year
+function plb() {
+        vim ~/.personal_logbook/personal_logbook_$(date '+%Y').md
+}
+
+
 #
+#
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
