@@ -7,6 +7,9 @@ set title           "show title on the window
 set display+=lastline  " show as much as possible of last lin
 set autowrite       " save file on some commands
 
+" set vim encryption
+set cm=blowfish2
+
 " How Tab behaves
 set tabstop=4        " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
