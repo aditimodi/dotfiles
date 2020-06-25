@@ -4,6 +4,7 @@
 alias aditya='ssh -Y aditi@10.4.9.103'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
 
+alias pratyush='ssh -Y aditi@10.12.1.31'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -50,6 +51,7 @@ function plb() {
 plugins=(git)
 plugins=(zsh-syntax-highlighting)
 plugins=(zsh-autosuggestions)
+plugins=(fzf)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # Path to your oh-my-zsh installation.
@@ -77,3 +79,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
