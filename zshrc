@@ -68,7 +68,6 @@ export ZSH="/Users/aditimodi/.oh-my-zsh"
 # else
 #   export EDITOR='mvim'
 # fi
-
 source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -79,5 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.dotfiles/shell/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
