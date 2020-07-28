@@ -20,6 +20,8 @@ Intention is to keep records of all the works (research, programming, learning, 
 <leader>n for inserting a new line with a box []
 To mark Todo Items in red use "!". ex: 
  [  ] this is an imp event marked in red !
+To mark Strategies in Cyan use "!!". ex: 
+ [  ] done !!
 To mark completed Items in green use "!!!!". ex: 
  [  ] done !!!!
 #Author: Aditi Modi 

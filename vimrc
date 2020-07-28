@@ -103,6 +103,8 @@ map ; :Files<CR>
 autocmd BufRead,BufnewFile *.md nnoremap <leader>n o [  ]
 autocmd BufRead,BufnewFile *.md :syn match Important /\[.*\!.*$/ 
 autocmd BufRead,BufnewFile *.md :hi Important ctermfg=White ctermbg=DarkRed
+autocmd BufRead,BufnewFile *.md :syn match Strategy /\[.*\!!.*$/ 
+autocmd BufRead,BufnewFile *.md :hi Strategy ctermfg=White ctermbg=DarkCyan
 autocmd BufRead,BufnewFile *.md :syn match Completed /\[.*\!!!!.*$/ 
 autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 

@@ -30,7 +30,7 @@ ZSH_THEME="agnoster"
 
 ## function to call research logbook by year and month
 function rlb() {
-        vim ~/.research_logbook/logbook_$(date '+%Y-%m').md
+        vim ~/.research_logbook/logbook_$(date '+%Y-%m').md      
 }
 
 ## function to call personal logbook by year
