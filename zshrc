@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
-alias aditya='ssh -Y aditi@10.4.9.103'
+alias aditya='ssh -Y aditi@10.4.9.103 -t tmux a'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
 
 alias pratyush='ssh -Y aditi@10.12.1.31'
@@ -37,7 +37,7 @@ function rlb() {
 function plb() {
         vim ~/.personal_logbook/personal_logbook_$(date '+%Y').md
 }
-
+export DISPLAY=localhost:0
 
 #
 #
@@ -60,7 +60,8 @@ export ZSH="/Users/aditimodi/.oh-my-zsh"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
