@@ -50,7 +50,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'junegunn/fzf.vim'
  Plug 'itchyny/lightline.vim'
 " Plug 'tpope/vim-surround'
- Plug 'dense-analysis/ale'
+ "Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
  "Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'preservim/nerdcommenter'
