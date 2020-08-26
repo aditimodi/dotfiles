@@ -52,7 +52,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'tpope/vim-surround'
  Plug 'dense-analysis/ale'
  Plug 'jiangmiao/auto-pairs'
- "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'preservim/nerdcommenter'
 
  " colorscheme plugins
@@ -115,4 +115,7 @@ autocmd BufnewFile *.md so ~/.vim/header_template.txt
 " switch between solarised dark and light themes
 call togglebg#map("<F5>")
 
-
+if has("autocmd")
+   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+       \| exe "normal! g'\"" | endif
+endif

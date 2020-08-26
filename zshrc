@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
-alias aditya='ssh -Y aditi@10.4.9.103 -t tmux a'
+alias aditya='ssh -Y aditi@10.4.9.103'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
 
 alias pratyush='ssh -Y aditi@10.12.1.31'
