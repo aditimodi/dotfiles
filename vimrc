@@ -1,3 +1,32 @@
+
+call plug#begin('~/.vim/plugged')
+
+ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ Plug 'junegunn/fzf.vim'
+ Plug 'itchyny/lightline.vim'
+" Plug 'tpope/vim-surround'
+ "Plug 'dense-analysis/ale'
+ Plug 'jiangmiao/auto-pairs'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'preservim/nerdcommenter'
+
+ " colorscheme plugins
+ "Plug 'altercation/vim-colors-solarized'
+ "Plug 'tomasr/molokai'
+ "Plug 'chriskempson/base16-vim'
+ "Plug 'lifepillar/vim-gruvbox8'
+ "Plug 'nielsmadan/harlequin'
+ "Plug 'w0ng/vim-hybrid'
+ "Plug 'kristijanhusak/vim-hybrid-material'
+ "Plug 'nanotech/jellybeans.vim'
+ "Plug 'Wutzara/vim-materialtheme'
+ Plug 'rakr/vim-one'
+ "Plug 'joshdick/onedark.vim'
+ "Plug 'NLKNguyen/papercolor-theme'
+ "Plug 'jpo/vim-railscasts-theme'
+ "Plug 'chriskempson/vim-tomorrow-theme'
+ call plug#end()
+
 syntax enable           " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
@@ -44,33 +73,6 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
 
-call plug#begin('~/.vim/plugged')
-
- Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
- Plug 'junegunn/fzf.vim'
- Plug 'itchyny/lightline.vim'
-" Plug 'tpope/vim-surround'
- Plug 'dense-analysis/ale'
- Plug 'jiangmiao/auto-pairs'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
- Plug 'preservim/nerdcommenter'
-
- " colorscheme plugins
- Plug 'altercation/vim-colors-solarized'
- "Plug 'tomasr/molokai'
- "Plug 'chriskempson/base16-vim'
- "Plug 'lifepillar/vim-gruvbox8'
- "Plug 'nielsmadan/harlequin'
- "Plug 'w0ng/vim-hybrid'
- "Plug 'kristijanhusak/vim-hybrid-material'
- "Plug 'nanotech/jellybeans.vim'
- "Plug 'Wutzara/vim-materialtheme'
- Plug 'rakr/vim-one'
- "Plug 'joshdick/onedark.vim'
- "Plug 'NLKNguyen/papercolor-theme'
- "Plug 'jpo/vim-railscasts-theme'
- "Plug 'chriskempson/vim-tomorrow-theme'
- call plug#end()
 syntax enable
 set background=dark
 colorscheme one                 " which colorscheme you currently want
@@ -113,9 +115,13 @@ autocmd BufnewFile *.md so ~/.vim/header_template.txt
 
 
 " switch between solarised dark and light themes
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
        \| exe "normal! g'\"" | endif
 endif
+
+let g:coc_global_extensions = [
+        \'coc-python'
+        \]
