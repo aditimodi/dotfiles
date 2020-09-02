@@ -39,6 +39,8 @@ function plb() {
 }
 export DISPLAY=localhost:0
 
+## key bindings for vim in shell
+bindkey -v
 #
 #
 
