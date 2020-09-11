@@ -3,8 +3,10 @@
 # alias
 alias aditya='ssh -Y aditi@10.4.9.103'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
-
+alias vim='/usr/local/bin/vim'
 alias pratyush='ssh -Y aditi@10.12.1.31'
+alias pratyush_jupyter='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
