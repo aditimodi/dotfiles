@@ -1,0 +1,6 @@
+
+## common items here for bash and zsh
+
+source ~/.aliases
+source ~/.exports
+source ~/.functions

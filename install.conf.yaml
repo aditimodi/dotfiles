@@ -14,3 +14,7 @@
     ~/.zshrc: zshrc
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vim:
+    ~/.aliases:
+    ~/.exports:
+    ~/.functions:
+    ~/.bashrc: bashrc_source
