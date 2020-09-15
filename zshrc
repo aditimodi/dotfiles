@@ -4,10 +4,10 @@ source ~/.commonrc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
-alias aditya='ssh -Y aditi@10.4.9.103'
+alias aditya='ssh -Y aditi@10.4.9.104'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
 alias vim='/usr/local/bin/vim'
-alias pratyush='ssh -Y aditi@10.12.1.31'
+alias pratyush='ssh -Y aditi@10.12.1.15'
 alias pratyush_jupyter='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
 
 
