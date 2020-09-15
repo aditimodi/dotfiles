@@ -9,7 +9,7 @@ python setup.py ~/.trash-cli/install
 ## install tmux for aditya
 
 shell_connection=(echo $SHELL_CONNECTION | awk '{print3}')
-if [ shell_connection==10.4.9.104 ]; then
+if [ $(shell_connection)==10.4.9.104 ]; then
         bash tmux/install_tmux_aditya.sh
 fi
 
