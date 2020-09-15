@@ -1,16 +1,19 @@
+#!/bin/bash
+
+
 ## install command line fuzzy finder 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+type fzf &> /dev/null && echo "fzf already installed" || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf \
+        && ~/.fzf/install)
 
 ## install trash can 
-git clone https://github.com/andreafrancia/trash-cli.git ~/.trash-cli
-python setup.py ~/.trash-cli/install
+type trash-put &> /dev/null && echo "trash cli already installed" || (git clone https://github.com/andreafrancia/trash-cli.git \
+        ~/.trash-cli && cd ~/.trash-cli && python setup.py install)
 
 ## install tmux for aditya
-
-shell_connection=(echo $SHELL_CONNECTION | awk '{print3}')
-if [ $(shell_connection)==10.4.9.104 ]; then
+if [[ $HOSTNAME == 'iitmlogin' ]]; then
         bash tmux/install_tmux_aditya.sh
+else
+        echo $HOSTNAME: "this is not aditya HPC, hence skipping tmux installation"
 fi
 
 
