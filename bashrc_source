@@ -1,5 +1,7 @@
+#!/bin/bash
 
-if  [ $HOSTNAME == *"login"* && $SHELL_CONNECTION=*"10.4.9.104"*]; then
+if  [ $HOSTNAME == *"iitmlogin"* ]; then
         source ~/.dotfiles/bashrc_aditya
-elif  [ $HOSTNAME == *"login"* && $SHELL_CONNECTION=*"10.12.1.19"*]; then
+elif  [ $HOSTNAME == *"elogin"*]; then
         source ~/.dotfiles/bashrc_pratyush
+fi
