@@ -3,7 +3,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim_plugged')
 
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
@@ -83,7 +83,7 @@ colorscheme one                 " which colorscheme you currently want
 
 " to enable comment plugin
 filetype plugin on
-:hi Comment ctermbg=DarkGray ctermfg=White    " highlight comments 
+:hi Comment ctermfg=White    " highlight comments 
 "backup
 set backup
 set backupdir=~/.vim_backup
@@ -117,7 +117,11 @@ autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 "adding templates
 autocmd BufnewFile *.md so ~/.vim/header_template.txt
 
-
+let g:coc_global_extensions = [
+				\'coc-markdownlint', 'coc-python', 'coc-explorer',
+				\'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
+				\'coc-marketplace', 'coc-sh', 'coc-diagnostic'
+				\]
 " switch between solarised dark and light themes
 "call togglebg#map("<F5>")
 
@@ -125,7 +129,3 @@ if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
        \| exe "normal! g'\"" | endif
 endif
-
-let g:coc_global_extensions = [
-        \'coc-python'
-        \]

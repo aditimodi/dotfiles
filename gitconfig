@@ -1,0 +1,9 @@
+
+[user]
+  name = aditimodi
+  email = aditimodi91@gmail.com
+
+[color "status"]
+  added = green
+  changed = blue
+  untracked = red 

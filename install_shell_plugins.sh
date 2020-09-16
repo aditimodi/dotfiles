@@ -1,5 +1,6 @@
 #!/bin/bash
 
+type conda &> /dev/null && echo "miniconda already installed"|| (echo "Installing miniconda...."; ./install_miniconda.sh)
 
 ## install command line fuzzy finder 
 type fzf &> /dev/null && echo "fzf already installed" || (git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf \
@@ -10,10 +11,9 @@ type trash-put &> /dev/null && echo "trash cli already installed" || (git clone 
         ~/.trash-cli && cd ~/.trash-cli && python setup.py install)
 
 ## install tmux for aditya
-if [[ $HOSTNAME == 'iitmlogin' ]]; then
+if      [[ $HOSTNAME == *'iitmlogin'* ]]; then
         bash tmux/install_tmux_aditya.sh
 else
         echo $HOSTNAME: "this is not aditya HPC, hence skipping tmux installation"
 fi
-
 
