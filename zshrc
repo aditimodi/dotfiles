@@ -1,6 +1,4 @@
 
-source ~/.commonrc
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
@@ -55,10 +53,8 @@ bindkey -v
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git)
-plugins=(zsh-syntax-highlighting)
-plugins=(zsh-autosuggestions)
-plugins=(fzf)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf)
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # Path to your oh-my-zsh installation.
@@ -86,7 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.dotfiles/shell/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
