@@ -1,5 +1,9 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim_plugged')
 
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
@@ -86,7 +90,7 @@ set foldmethod=indent   " fold based on indent level
 syntax enable
 " to enable comment plugin
 filetype plugin on
-":hi Comment ctermbg=DarkGray ctermfg=White    " highlight comments 
+:hi Comment ctermfg=White    " highlight comments 
 "backup
 set backup
 set backupdir=~/.vim_backup
@@ -119,12 +123,19 @@ autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 "adding templates
 autocmd BufnewFile *.md so ~/.vim/header_template.txt
 
+<<<<<<< HEAD
 set list lcs=tab:\|\
 let g:indent_guides_guide_size=1
 let g:indent_guides_color_change_percent=3
 let g:indent_guides_enable_on_vim_startup=1
 
 
+=======
+let g:coc_global_extensions = [
+				\'coc-markdownlint', 'coc-python', 'coc-explorer',
+				\'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
+				\'coc-marketplace', 'coc-sh', 'coc-diagnostic'
+				\]
 " switch between solarised dark and light themes
 "call togglebg#map("<F5>")
 
@@ -132,7 +143,3 @@ if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
        \| exe "normal! g'\"" | endif
 endif
-
-let g:coc_global_extensions = [
-        \'coc-python'
-        \]

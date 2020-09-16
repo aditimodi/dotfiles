@@ -6,13 +6,15 @@
 
 - create:
    - ~/.vim
-   - ~/.vim/autoload/
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-
+   - [git submodule update --init --recursive, Installing submodules]
 - link:
     ~/.vimrc: vimrc
-    ~/.vim/autoload/plug.vim: vim-plug/plug.vim 
     ~/.zshrc: zshrc
-    ~/.vim/header_template.txt: vim-templates/header_template_logbook.txt
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vim:
+    ~/.aliases:
+    ~/.exports:
+    ~/.functions:
+    ~/.gitconfig: gitconfig

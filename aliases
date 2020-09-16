@@ -1,3 +1,7 @@
-#!/bin/bash
 
-alias rm='echo "This is not the command you are looking for."; false'
+alias rm='echo "This is not the command you are looking for."; false'   ## use trash-put
+#alias vim='/usr/local/bin/vim'
+alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+alias dhelp="grep "^function" ~/.dotfiles/functions | sed 's/function/+/g' | sed 's/() #/ - /g'"
+
+alias ..="cd .."

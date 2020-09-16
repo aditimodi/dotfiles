@@ -1,10 +1,13 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
-alias aditya='ssh -Y aditi@10.4.9.103'
+alias aditya='ssh -Y aditi@10.4.9.104'
 alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
+alias vim='/usr/local/bin/vim'
+alias pratyush='ssh -Y aditi@10.12.1.15'
+alias pratyush_jupyter='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
 
-alias pratyush='ssh -Y aditi@10.12.1.31'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -50,10 +53,8 @@ bindkey -v
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git)
-plugins=(zsh-syntax-highlighting)
-plugins=(zsh-autosuggestions)
-plugins=(fzf)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions fzf)
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # Path to your oh-my-zsh installation.
@@ -81,7 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.dotfiles/shell/aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
