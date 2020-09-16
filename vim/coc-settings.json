@@ -1,0 +1,48 @@
+{
+
+	"python.linting.pylintEnabled": true,
+
+  "python.linting.enabled": true,
+
+	"suggest.noselect": false,
+
+	"python.jediEnabled": true,
+
+	"coc.preferences.formatOnSaveFiletypes": ["python"],
+
+	"html.autoClosingTags": true,
+
+	"languageserver": {
+		"fortran": {
+			"command": "fortls",
+			"args": [
+				"--lowercase_intrinsics"
+			],
+			"filetypes": [
+				"fortran"
+			],
+			"rootPatterns": [
+				".fortls",
+				".git/"
+			]
+		}
+	},
+
+	"diagnostic-languageserver.filetypes": {
+		"vim": "vint",
+		"email": "languagetool",
+		"markdown": [ "write-good", "markdownlint" ],
+		"sh": "shellcheck"
+	},
+
+	"diagnostic-languageserver.formatFiletypes": {
+		"sh": "shfmt"
+	},
+
+	"diagnostic-languageserver.formatters": {
+		"shfmt": {
+			"command": "shfmt",
+			"args": ["-i", "2", "-bn", "-ci", "-sr"]
+		}
+	}
+}
