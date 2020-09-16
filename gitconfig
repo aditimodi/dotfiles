@@ -6,4 +6,6 @@
 [color "status"]
   added = green
   changed = blue
-  untracked = red 
+  untracked = red
+[alias]
+  st = status
