@@ -1,8 +1,3 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
-endif
-
 call plug#begin('~/.vim_plugged')
 
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -10,12 +5,15 @@ call plug#begin('~/.vim_plugged')
  Plug 'itchyny/lightline.vim'
  "Plug 'dense-analysis/ale'
  "Plug 'jiangmiao/auto-pairs'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ 
+ if $HOSTNAME !~ "iitmlogin"
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ endif
+
  Plug 'preservim/nerdcommenter'
  Plug 'Yggdroot/indentLine'
  Plug 'segeljakt/vim-stealth'
  Plug 'ctrlpvim/ctrlp.vim'
-
 
  " colorscheme plugins
  "Plug 'altercation/vim-colors-solarized'
@@ -33,6 +31,7 @@ call plug#begin('~/.vim_plugged')
  "Plug 'jpo/vim-railscasts-theme'
  "Plug 'chriskempson/vim-tomorrow-theme'
  "Plug 'HenryNewcomer/vim-theme-papaya'
+
  call plug#end()
 
 colorscheme one                 " which colorscheme you currently want
@@ -123,19 +122,11 @@ autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 "adding templates
 autocmd BufnewFile *.md so ~/.vim/header_template.txt
 
-<<<<<<< HEAD
-set list lcs=tab:\|\
-let g:indent_guides_guide_size=1
-let g:indent_guides_color_change_percent=3
-let g:indent_guides_enable_on_vim_startup=1
-
-
-=======
-let g:coc_global_extensions = [
-				\'coc-markdownlint', 'coc-python', 'coc-explorer',
-				\'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
-				\'coc-marketplace', 'coc-sh', 'coc-diagnostic'
-				\]
+"let g:coc_global_extensions = [
+				"\'coc-markdownlint', 'coc-python', 'coc-explorer',
+				"\'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
+				"\'coc-marketplace', 'coc-sh', 'coc-diagnostic'
+				"\]
 " switch between solarised dark and light themes
 "call togglebg#map("<F5>")
 
