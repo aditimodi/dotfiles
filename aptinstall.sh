@@ -2,9 +2,9 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 function install {
-  which $1 &> /dev/null
+  command -v $1 &> /dev/null
 
-  if [ $? -ne 0 ]; then
+  if [ $? -ne 0 ]; then             # $? is a special variable contains the exit status of previous command
     echo "Installing: ${1}..."
     sudo apt install -y $1
   else
