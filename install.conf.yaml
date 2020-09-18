@@ -6,6 +6,7 @@
 
 - create: 
   - ~/.local/share/jupyter/nbextensions/snippets/
+  - ~/.jupyter/nbconfig/
 
 - shell:
    - [git submodule update --init --recursive, Installing submodules]
