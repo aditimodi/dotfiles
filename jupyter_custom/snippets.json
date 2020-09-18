@@ -1,0 +1,92 @@
+{
+     "snippets" : [
+         {
+             "name" : "StandardImport",
+             "code" : [
+                 "%load_ext autoreload",
+                 "%autoreload 2",
+                 "from netCDF4 import Dataset, num2date, date2num",
+                 "import numpy as np",
+                 "import matplotlib.patches as mpatches",
+                 "import matplotlib.ticker as mticker",
+                 "import matplotlib.colors as mcolors",
+                 "import matplotlib.dates as dates",
+                 "import cartopy.crs as ccrs",
+                 "import cartopy.feature as cf",
+                 "import matplotlib.pyplot as plt",
+                 "import xarray as xr",
+                 "import calendar",
+                 "from cdo import *",
+                 "from nco import Nco",
+                 "import cmocean",
+                 "from scipy.signal import find_peaks,peak_prominences",
+                 "import seaborn as sns",
+                 "import pandas as pd",
+                 "import matplotlib as mpl",
+                 "from datetime import datetime, timedelta",
+                 "import cf_units",
+                 "from cftime import DatetimeNoLeap",
+                 "from matplotlib.colors import ListedColormap",
+                 "import blockdiag",
+                 "from IPython.display import Image",
+                 "from scipy import fftpack",
+                 "from pathlib import Path",
+                 "cdo=Cdo()",
+                " nco=Nco()",
+                 "sns.set()"
+             ]
+         },
+{         
+"name" : "NotebookLightTheme",
+       "code" : [
+              "!jt -N -T -f firacode -tf loraserif -nf latosans -ofs 9 -fs 11 -tfs 11 -nfs 11 -cellw 85% -t solarizedl"
+         ]
+      },
+{         
+"name" : "NotebookDarkTheme",
+       "code" : [
+              "!jt -N -T -t onedork"
+         ]
+      },
+{         
+"name" : "NotebookDefaultTheme",
+       "code" : [
+              "!jt -r"
+         ]
+      },
+{         
+"name" : "PlotStyle",
+       "code" : [
+             "plt.style.use('fivethirtyeight') "
+         ]
+     },
+{         
+"name" : "Title",
+       "code" : [
+             "# TITLE: "
+         ]
+     },
+{         
+"name" : "Abstract",
+       "code" : [
+             "# Abstract" ,
+              "print('Summary: ')"
+         ]
+     },
+{         
+"name" : "Getdata",
+       "code" : [
+             "# GET DATA" ,
+             "# GET New Data" 
+
+         ]
+     },
+{         
+"name" : "PrintOutputsInteractively",
+       "code" : [
+             "from IPython.core.interactiveshell import InteractiveShell",
+              "InteractiveShell.ast_node_interactivity = 'all'"
+         ]
+     }
+   ]
+ }

@@ -1,10 +1,10 @@
-
+#!/bin/bash
 sudo apt-get update && sudo apt-get upgrade -y
 
 function install {
   command -v $1 &> /dev/null
 
-  if [ $? -ne 0 ]; then
+  if [ $? -ne 0 ]; then             # $? is a special variable contains the exit status of previous command
     echo "Installing: ${1}..."
     sudo apt install -y $1
   else
@@ -21,6 +21,13 @@ install tree
 install git
 install shellcheck;
 install vim
+
+## Gnome-Shell
+install gnome-tweaks
+install gnome-shell-extensions
+install fonts-powerline
+install chrome-gnome-shell
+echo "chrome-gnome-shell is ready; install shell integration extension in chrome and start tweaking around"
 
 ## SSH
 install openssh-server;

@@ -1,0 +1,60 @@
+{
+  "load_extensions": {
+    "jupyter-js-widgets/extension": true,
+    "nbextensions_configurator/config_menu/main": true,
+    "contrib_nbextensions_help_item/main": true,
+    "collapsible_headings/main": true,
+    "help_panel/help_panel": false,
+    "code_prettify/autopep8": false,
+    "hide_input/main": false,
+    "execute_time/ExecuteTime": true,
+    "varInspector/main": true,
+    "init_cell/main": true,
+    "toc2/main": true,
+    "zenmode/main": true,
+    "select_keymap/main": false,
+    "keyboard_shortcut_editor/main": false,
+    "python-markdown/main": true,
+    "scratchpad/main": true,
+    "splitcell/splitcell": false,
+    "exercise/main": false,
+    "datestamper/main": false,
+    "latex_envs/latex_envs": false,
+    "hide_input_all/main": true,
+    "vim_binding/vim_binding": true,
+    "limit_output/main": false,
+    "livemdpreview/livemdpreview": true,
+    "printview/main": true,
+    "table_beautifier/main": true,
+    "code_prettify/code_prettify": false,
+    "snippets_menu/main": true,
+    "toggle_all_line_numbers/main": false,
+    "skill/main": false,
+    "runtools/main": false,
+    "hinterland/hinterland": false,
+    "highlighter/highlighter": true,
+    "snippets/main": true
+  },
+  "collapsible_headings": {
+    "add_button": false,
+    "add_insert_header_buttons": false
+  },
+  "livemdpreview": {
+    "show_side_by_side": true
+  },
+  "hinterland": {
+    "hint_inside_comments": false
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": true
+    }
+  },
+  "snippets": {
+    "insert_as_new_cell": false,
+    "include_custom_menu": true
+  },
+  "varInspector": {
+    "window_display": true
+  }
+}
