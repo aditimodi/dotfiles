@@ -1,5 +1,0 @@
-
-if  [ $HOSTNAME == *"login"* && $SHELL_CONNECTION=*"10.4.9.104"*]; then
-        source ~/.dotfiles/bashrc_aditya
-elif  [ $HOSTNAME == *"login"* && $SHELL_CONNECTION=*"10.12.1.19"*]; then
-        source ~/.dotfiles/bashrc_pratyush
