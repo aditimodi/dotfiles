@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if  [ $HOSTNAME == *"iitmlogin"* ]; then
-        source ~/.dotfiles/bashrc_aditya
-elif  [ $HOSTNAME == *"elogin"*]; then
-        source ~/.dotfiles/bashrc_pratyush
-fi

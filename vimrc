@@ -3,17 +3,16 @@ call plug#begin('~/.vim_plugged')
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
  Plug 'itchyny/lightline.vim'
- "Plug 'dense-analysis/ale'
- "Plug 'jiangmiao/auto-pairs'
- 
- if $HOSTNAME !~ "iitmlogin"
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
- endif
 
+" if $HOSTNAME !~ "iitmlogin"
+"  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" endif
+ 
  Plug 'preservim/nerdcommenter'
  Plug 'Yggdroot/indentLine'
  Plug 'segeljakt/vim-stealth'
  Plug 'ctrlpvim/ctrlp.vim'
+ Plug 'lervag/vimtex'
 
  " colorscheme plugins
  "Plug 'altercation/vim-colors-solarized'
@@ -123,12 +122,16 @@ autocmd BufRead,BufnewFile *.md :hi Completed ctermfg=White ctermbg=DarkGreen
 autocmd BufnewFile *.md so ~/.vim/header_template.txt
 
 "let g:coc_global_extensions = [
-				"\'coc-markdownlint', 'coc-python', 'coc-explorer',
-				"\'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
-				"\'coc-marketplace', 'coc-sh', 'coc-diagnostic'
-				"\]
+"        \'coc-markdownlint', 'coc-python', 'coc-explorer',
+"        \'coc-json', 'coc-texlab', 'coc-yaml', 'coc-clangd',
+"        \'coc-marketplace', 'coc-sh', 'coc-diagnostic'
+"        \]
 " switch between solarised dark and light themes
 "call togglebg#map("<F5>")
+
+" Preferences for vimtex
+let g:vimtex_fold_enabled = 1
+let g:tex_flavor = 'latex'
 
 if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")

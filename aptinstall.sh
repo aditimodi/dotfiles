@@ -1,4 +1,4 @@
-
+#!/bin/bash
 sudo apt-get update && sudo apt-get upgrade -y
 
 function install {
@@ -21,6 +21,13 @@ install tree
 install git
 install shellcheck;
 install vim
+
+## Gnome-Shell
+install gnome-tweaks
+install gnome-shell-extensions
+install fonts-powerline
+install chrome-gnome-shell
+echo "chrome-gnome-shell is ready; install shell integration extension in chrome and start tweaking around"
 
 ## SSH
 install openssh-server;

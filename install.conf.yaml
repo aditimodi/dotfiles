@@ -4,8 +4,13 @@
 
 - clean: ['~']
 
+- create: 
+  - ~/.local/share/jupyter/nbextensions/snippets/
+  - ~/.jupyter/nbconfig/
+
 - shell:
    - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
@@ -14,6 +19,7 @@
     ~/.aliases:
     ~/.exports:
     ~/.functions:
+    ~/.commonrc: 
     ~/.gitconfig: gitconfig
     ~/.local/share/jupyter/nbextensions/snippets/snippets.json: jupyter_custom/snippets.json
     ~/.jupyter/nbconfig/notebook.json: jupyter_custom/notebook.json
