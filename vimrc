@@ -131,6 +131,16 @@ autocmd BufnewFile *.md so ~/.vim/header_template.txt
 " Preferences for vimtex
 let g:vimtex_fold_enabled = 1
 let g:tex_flavor = 'latex'
+let g:vimtex_compiler_latexmk = {
+      \ 'options' : [
+      \   '-lualatex',
+      \   '-silent',
+      \   '-synctex=1',
+      \   '-interaction=nonstopmode',
+      \ ],
+      \ 'build_dir' : 'livepreview',
+      \}
+
 
 if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
