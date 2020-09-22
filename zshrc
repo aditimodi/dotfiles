@@ -3,12 +3,6 @@ source ~/.dotfiles/commonrc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias
-alias aditya='ssh -Y aditi@10.4.9.104'
-alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
-alias vim='/usr/local/bin/vim'
-alias pratyush='ssh -Y aditi@10.12.1.15'
-alias pratyush_jupyter='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
-
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -32,15 +26,6 @@ ZSH_THEME="agnoster"
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
-## function to call research logbook by year and month
-function rlb() {
-        vim ~/.research_logbook/logbook_$(date '+%Y-%m').md      
-}
-
-## function to call personal logbook by year
-function plb() {
-        vim ~/.personal_logbook/personal_logbook_$(date '+%Y').md
-}
 export DISPLAY=localhost:0
 
 ## key bindings for vim in shell

@@ -42,5 +42,6 @@ cask_install vlc;
 install vim;
 cask_install iterm2;
 install shellcheck;
-
+cask_install basictex;
+sudo tlmgr install latexmk;    ## install latexmk to support vim-latex
 

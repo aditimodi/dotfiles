@@ -34,3 +34,6 @@ install openssh-server;
 sudo systemctl status ssh;
 sudo ufw allow ssh;
 sudo systemctl enable ssh,
+
+## Install using snap
+sudo snap install acrordrdc
