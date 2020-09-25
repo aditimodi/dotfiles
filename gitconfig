@@ -9,3 +9,7 @@
   untracked = red
 [alias]
   st = status
+  a = add
+  ci = commit 
+  p = push
+  l = log --all --decorate --oneline

@@ -4,9 +4,9 @@ function mkd() # Create a new directory and enter it
 	mkdir -p "$@" && cd "$_";
 }
 
-function rlb() # call research logbook by year and month
+function rlb() # call research logbook by year 
 {
-        vim ~/.research_logbook/logbook_$(date '+%Y-%m').md      
+        vim ~/.research_logbook/logbook_$(date '+%Y').md      
 }
 
 function plb() # call personal logbook by year
