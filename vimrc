@@ -3,10 +3,10 @@ call plug#begin('~/.vim_plugged')
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
  Plug 'itchyny/lightline.vim'
-
-" if $HOSTNAME !~ "iitmlogin"
-"  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" endif
+ Plug 'dense-analysis/ale'
+ if $HOSTNAME !~ "iitmlogin"
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ endif
  
  Plug 'preservim/nerdcommenter'
  Plug 'Yggdroot/indentLine'
@@ -141,7 +141,6 @@ let g:vimtex_compiler_latexmk = {
       \ ],
       \ 'build_dir' : 'livepreview',
       \}
-
 
 if has("autocmd")
    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
