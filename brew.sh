@@ -16,7 +16,7 @@ function install {
 function cask_install {
   command -v $1 &> /dev/null
 
-  if [ $? -ne 0 ]; then             # $? is a special variable contains the exit status of previous command
+  if [ $? -ne 0 ]; then             # $?:special variable containing exit status of previous command
     echo "Installing: ${1}..."
     brew cask install $1
   else
@@ -29,6 +29,7 @@ install tmux;
 install zsh;
 install python3;
 install node;
+install fzf;
 
 ## homebrew cash to innstall GUI macos applications
 ## browsers
