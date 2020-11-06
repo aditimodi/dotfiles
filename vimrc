@@ -15,7 +15,6 @@ call plug#begin('~/.vim_plugged')
  Plug 'Yggdroot/indentLine'
  Plug 'segeljakt/vim-stealth'
  Plug 'ctrlpvim/ctrlp.vim'
- Plug 'lervag/vimtex'
 
  " colorscheme plugins
  "Plug 'altercation/vim-colors-solarized'
