@@ -21,6 +21,7 @@ install tree
 install git
 install shellcheck;
 install vim
+install fzf
 
 ## Gnome-Shell
 install gnome-tweaks
