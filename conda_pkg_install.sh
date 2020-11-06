@@ -14,3 +14,5 @@ function install {
 }
 
 install tmux
+install jupyter_contrib_nbextensions
+

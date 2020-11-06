@@ -5,3 +5,12 @@ alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
 alias fhelp="grep "^function" ~/.dotfiles/functions | sed 's/function/+/g' | sed 's/() #/ - /g'"
 
 alias ..="cd .."
+
+alias aditya='ssh -Y aditi@10.4.9.103'
+alias mountaditya="sshfs -o follow_symlinks aditi@10.4.9.103:/moes/home/aditi ~/aditya/"
+alias pratyush='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
+
+##trash-cli aliases
+alias tp='trash-put'
+alias tl='trash-list'
+
