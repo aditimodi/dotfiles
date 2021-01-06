@@ -12,4 +12,4 @@ function install {
   fi
 }
 
-palettable
+install palettable
