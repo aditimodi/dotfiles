@@ -14,3 +14,4 @@ alias pratyush='ssh -L 8111:127.0.0.1:8889 aditi@10.12.1.15'
 alias tp='trash-put'
 alias tl='trash-list'
 
+alias jp='jupyter-notebook --no-browser --ip=127.0.0.1'
